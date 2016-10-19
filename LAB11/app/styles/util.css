@@ -1,15 +1,61 @@
-header {
+#header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  text-align: center;
+  background: #fff;
+  box-shadow: -1px 11px 13px -9px rgba(0,0,0,0.75);
+}
+#header .websiteIcon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+#header h2 {
+  font-size: 30pt;
+  font-weight: 900;
+}
+#header a:hover { text-decoration: none; }
+#header span:nth-child(1) { color: rgb(66, 133, 244); }
+#header span:nth-child(2) { color: rgb(234, 67, 53); }
+#header span:nth-child(3) { color: rgb(251, 188, 5); }
+#header span:nth-child(4) { color: rgb(66, 133, 244); }
+#header span:nth-child(5) { color: rgb(52, 168, 83); }
+#header span:nth-child(6) {
+  display: inline-block;
+  color: rgb(234, 67, 53);
+  transform: rotate(-20deg);
+}
+#header ul { padding: 15px; }
+#header li {
+  margin-right: 30px;
+  display: inline-block;
+  font-size: 15pt;
+  vertical-align: middle;
+}
+#header ul a {
+  color: black;
+}
+.container {
+  padding-top: 50px;
+  background: rgba(245, 245, 245, 1);
+  min-height: 100vh;
 }
 footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+footer h3 {
+  color: #fff;
 }
 html, body {
   min-height: 100%;
+}
+
+.nm {
+  margin: 0;
 }
