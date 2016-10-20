@@ -44,8 +44,8 @@ app.use('/index', function(req, res) {
   res.send(indexContent);
 });
 /* protfolio routing */
-app.use('/protfolio', router.protfolio.index);
-app.use('/fakeYoutube', router.protfolio.youtube);
+app.use('/protfolio$', router.protfolio.index);
+app.use('/protfolio/fakeYoutube', router.protfolio.youtube);
 /* article part */
 app.use('/article', router.article.index);
 

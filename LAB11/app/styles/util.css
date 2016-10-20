@@ -6,6 +6,7 @@
   text-align: center;
   background: #fff;
   box-shadow: -1px 11px 13px -9px rgba(0,0,0,0.75);
+  z-index: 1;
 }
 #header .websiteIcon {
   position: absolute;
@@ -38,19 +39,18 @@
   color: black;
 }
 .container {
-  padding-top: 50px;
+  padding-top: 70px;
   background: rgba(245, 245, 245, 1);
-  min-height: 100vh;
+  min-height: calc(100vh - 55px);
 }
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   background: rgba(0, 0, 0, 0.8);
 }
 footer h3 {
   color: #fff;
+  margin: 0;
+  padding: 15px;
 }
 html, body {
   min-height: 100%;

@@ -25,7 +25,9 @@ main > section:first-child {
 .auth img {
   width: 100%;
 }
-
+.authInfo {
+  padding-left: 10px;
+}
 .authInfo span {
   margin-top: 5px;
   display: inline-block;

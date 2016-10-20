@@ -1,2 +1,2 @@
 ## Structure
-![tree](http://i.imgur.com/gECUJTx.png)
+![tree](http://i.imgur.com/6HhVxwh.png)
