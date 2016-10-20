@@ -1,0 +1,114 @@
+mixin box(obj)
+  - obj.remark = obj.remark || ''
+  - obj.msgNum = obj.msgNum || 0
+  article.vBox(data-remark= obj.remark, data-commentnum= obj.msgNum)
+    img(src= obj.img)
+    div.infoContainer
+      h4.nm #{obj.title}
+      h5.nm.auth #{obj.auth}
+      h5.nm.viewNum 觀看次數： 
+        span= obj.viewNum
+div.container.center-block
+  main.col-xs-12.col-md-8
+    section.imgContainer(data-auth= '測試人員', data-remark= '這裡可以放很多字，主要是一些跟影片有關係的敘述\n要換行必須要使用多個p TAG才能夠有換行的功能，不然會全部黏在同一行上面\n其實我已經不知道要打甚麼好了，就隨便亂加了一行。', data-viewnum= 55548, data-commentnum= '99', data-title= '【測試】我想做一個Youtube', data-img= 'https://tunerise.co/wp-content/uploads/2015/10/youtube-logo.jpg')
+      img(src= 'https://tunerise.co/wp-content/uploads/2015/10/youtube-logo.jpg')
+      div.hoverShow
+        section.pull-left
+          button#pause.btn.vBtn ▷
+          button#next.btn.vBtn →|
+          button#volumn.btn.vBtn Vol
+          span.playTime 22:38 / 31:01
+        section.pull-right
+          button#setting.btn.vBtn ⊚
+          button#fullScreen.btn.vBtn ◧
+    section.autherSec
+      h2.nm 【測試】我想做一個Youtube
+      div.authContainer.text-left
+        div.auth
+          img(src= 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Rsz_youtube-logo-white.png')
+        div.authInfo
+          h5.nm 測試人員
+          h5.hover.nm
+            span → 訂閱
+            span → 立即訂閱
+      div.options
+        button.btn.btn-default ＋新增至清單
+        button.btn.btn-default →分享
+        button.btn.btn-default ‧‧‧ 更多
+    section.infoSec.hidden-sm.hidden-xs
+      p.
+        這裡可以放很多字，主要是一些跟影片有關係的敘述
+      p.
+        要換行必須要使用多個p TAG才能夠有換行的功能，不然會全部黏在同一行上面
+      p.
+        其實我已經不知道要打甚麼好了，就隨便亂加了一行。
+    section.commentSec.hidden-sm.hidden-xs
+      header
+        h5 留言 ‧ 99
+      div.selfComment
+        img(src= 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Rsz_youtube-logo-white.png')
+        textarea
+        div.text-right.clearfix
+          button.btn.btn-default 取消
+          button.btn.btn-info Comment
+  aside.col-xs-12.col-md-4
+    header
+      h5 即將播放
+    section.slideContainer
+      +box({
+        img: 'https://unmisable.com/images/clients/3.jpg',
+        title: '【扯】linux唬爛教程',
+        auth: 'jacyzon',
+        viewNum: 50,
+        remark: '如果你想要學會又不想努力，你想要一天PO一百篇部落格的文章又不想動筆；\n你想要交女朋友又不想出門，你想要提早畢業又找大刀當老師，那這部影片將會是你的歸宿。',
+        msgNum: 53
+      })
+      +box({
+        img: 'http://www.ayantek.com/wp-content/uploads/2014/10/angularjs-logo.png',
+        title: '【實用】如何學不會AngularJS', 
+        auth: 'David Jaw',
+        viewNum: '50,411',
+        remark: '看完這部影片之後，你將能夠非常輕鬆的看下一部影片，並且能夠熟練地使用youtube的檢舉功能。',
+        msgNum: 55
+      })
+      +box({
+        img: 'http://www.brighter-connections.com/wp-content/uploads/2015/09/microsoft-logo.png',
+        title: '【官方】正在更新到Win10...', 
+        auth: 'Bill Gates',
+        viewNum: '2,331,121',
+        remark: '您要現在更新還是稍後更新?',
+        msgNum: 22
+      })
+      +box({
+        img: 'http://ckpush.com/upload/sites/logo-bootstrap.png',
+        title: '【好用】Bootstrap教程', 
+        auth: 'Anonymous',
+        viewNum: '17,211',
+        remark: '讓我BOOT你的STRAP',
+        msgNum: 89
+      })
+      +box({
+        img: 'http://ckpush.com/upload/sites/logo-mongodb.png',
+        title: '【急速】十秒鐘學會Mongodb', 
+        auth: 'thiefjim',
+        viewNum: '222,514',
+        remark: '1...2...3..4...5....6....7......8........9.............10 OK 你學會了。',
+        msgNum: 11
+      })
+      +box({
+        img: 'http://cobweb.biz/images/logos/css-html.jpg',
+        title: '【探秘】HTML沒告訴你的五件事', 
+        auth: 'WNSMD',
+        viewNum: '1,740',
+        remark: '我也不會跟你講',
+        msgNum: 5
+      })
+      +box({
+        img: 'http://cobweb.biz/images/logos/jquery.jpg',
+        title: '【密技】jQuery從入門到精通', 
+        auth: 'Yourmother',
+        viewNum: '43,477',
+        remark: '下一部影片：從精通到忘光',
+        msgNum: 51
+      })
+

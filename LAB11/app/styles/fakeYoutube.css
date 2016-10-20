@@ -1,0 +1,175 @@
+.nm {
+  margin: 0;
+}
+
+.container {
+  padding: 30px;
+  background: #f1f1f1;
+}
+
+main > section {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 5px;
+  margin-top: 15px;
+}
+main > section:first-child {
+  box-shadow: none;
+  padding: 0;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.auth img {
+  width: 100%;
+}
+
+.authInfo span {
+  margin-top: 5px;
+  display: inline-block;
+  background: red;
+  color: #fff;
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.authSec {
+  padding-top: 15px;
+}
+
+.authContainer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.authContainer div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.options {
+  padding: 3px 10px;
+}
+.options button {
+  padding: 5px;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.infoSec {
+  padding: 15px;
+}
+.infoSec p {
+  margin-bottom: 3px;
+}
+
+.commentSec {
+  padding: 5px 15px;
+}
+
+.selfComment {
+  font-size: 0;
+}
+.selfComment textarea {
+  font-size: initial;
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 50px - 10px);
+  margin-left: 10px;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+aside {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.vBox {
+  margin-bottom: 7px;
+  padding: 0;
+}
+.vBox:first-child {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+}
+.vBox img, .vBox .infoContainer {
+  display: inline-block;
+  vertical-align: top;
+}
+.vBox .infoContainer {
+  width: calc(100% - 175px);
+}
+.vBox h4 {
+  font-size: 11pt;
+}
+.vBox h5 {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+@media(max-width: 992px) {
+  main {
+    padding: 0 !important;
+  }
+}
+.imgContainer {
+  position: relative;
+}
+.imgContainer .hoverShow {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  opacity: 0;
+}
+.imgContainer .hoverShow .vBtn {
+  background: transparent;
+  color: #fff;
+  margin-right: 5px;
+}
+.imgContainer .hoverShow section {
+  display: inline-block;
+  vertical-align: middle;
+}
+.imgContainer .hoverShow .playTime {
+  color: #fff;
+}
+.imgContainer:hover .hoverShow {
+  opacity: 1;
+}
+
+.authInfo h5:last-child span:last-child {
+  display: none;
+}
+.authInfo h5:last-child:hover span:first-child {
+  display: none;
+}
+.authInfo h5:last-child:hover span:last-child {
+  display: inline-block;
+}
+
+.hoverShow {
+  transition: opacity ease 400ms;
+}
+
+.vBox {
+  transition: transform ease 300ms;
+}
+.vBox:hover {
+  transform: scale(1.1);
+}
+
+.vBox img {
+  width: 170px;
+}
