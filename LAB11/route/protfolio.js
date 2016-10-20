@@ -1,7 +1,7 @@
 /* global exports */
 exports.index = function(req, res) {
   var pageInfo = {
-    viewName: 'profolio',
+    viewName: 'protfolio',
     pageTitle: '作品列表 - ',
   };
   var content = req.app.get('render')(pageInfo);

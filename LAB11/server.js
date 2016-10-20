@@ -22,6 +22,7 @@ app.set('render', function(pageInfo) {
   for(var key in pageInfo) {
     page[key] = pageInfo[key];
   }
+  page.content = pug.renderFile('./app/template/' + pageInfo.viewName + '.pug', pageInfo);
   var content = pug.renderFile('./app/container.pug', page);
   return content;
 });

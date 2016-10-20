@@ -4,13 +4,18 @@ html
     meta(charset= 'utf-8')
     link(rel= 'stylesheet', href= '/styles/util.css')
     link(rel= 'stylesheet', href= 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel= 'stylesheet', href= `/styles/${viewName}.css`)
     - if(extraCss !== undefined && extraCss.length > 0)
       - for(var i = 0; i < extraCss.length; i++)
         link(rel= 'stylesheet', href= extraCss[i])
     script(src= 'https://code.jquery.com/jquery-3.1.1.min.js')
     script(src= '/scripts/util.js')
+    script(src= `/scripts/${viewName}.js`)
+    - if(extraJS !== undefined && extraJS.length > 0)
+      - for(var i = 0; i < extraJS.length; i++)
+        script(src= extraJS[i])
     title #{pageTitle}Nodejs練習
   body
     include /header.pug
     include /footer.pug
-    div.container
+    div.container !{content}
