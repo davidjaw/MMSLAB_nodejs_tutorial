@@ -18,17 +18,27 @@ app.use(function(req, res, next) {
 
 /* set global function */
 app.set('render', function(pageInfo) {
-  var content = pug.renderFile('./app/container.pug', { basedir: './app/template/' }, pageInfo);
+  var page = { basedir: './app/template/' };
+  for(var key in pageInfo) {
+    page[key] = pageInfo[key];
+  }
+  var content = pug.renderFile('./app/container.pug', page);
   return content;
 });
 
 app.use('^/$', function(req, res) {
-  var indexInfo = { viewName: 'index' };
+  var indexInfo = {
+    viewName: 'index',
+    pageTitle: '首頁 - ',
+  };
   var indexContent = req.app.get('render')(indexInfo);
   res.send(indexContent);
 });
 app.use('/index', function(req, res) {
-  var indexInfo = { viewName: 'index' };
+  var indexInfo = {
+    viewName: 'index',
+    pageTitle: '首頁 - ',
+  };
   var indexContent = req.app.get('render')(indexInfo);
   res.send(indexContent);
 });

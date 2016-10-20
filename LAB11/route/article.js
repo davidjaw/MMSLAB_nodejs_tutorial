@@ -1,11 +1,10 @@
-/* global require, exports */
-var pug = require('pug');
+/* global exports */
 exports.index = function(req, res) {
   var pageInfo = {
     viewName: 'article',
-    extra: false,
+    pageTitle: '文章列表 - ',
   };
-  var content = pug.renderFile('./app/container.pug', { basedir: './app/template' }, pageInfo);
+  var content = req.app.get('render')(pageInfo);
   res.send(content);
 };
 
